@@ -4,6 +4,7 @@ body {
     padding: 0;
     overflow: hidden;
     font-family: Arial, sans-serif;
+    background: #f5f5f5; /* Light background to match the white video container */
 }
 
 /* Background Styling */
@@ -90,22 +91,21 @@ body {
 /* Video Container */
 .video-container {
     position: relative;
-    max-width: 90%;
-    margin: auto;
-    padding: 20px;
-    background: rgba(255, 255, 255, 0.8);
+    max-width: 90%;  /* Allows for mobile optimization */
+    margin: 0 auto;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.9);
     border-radius: 10px;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    max-height: 90vh;  /* Ensure it doesn't take up the full height */
     overflow: hidden;
-    width: 100%; /* Ensure it fits mobile screens */
-    box-sizing: border-box;
 }
 
 /* Play Button */
 .play-button {
     margin-top: 10px;
-    padding: 12px 24px;
+    padding: 10px 20px;
     font-size: 16px;
     background: #ff6f61;
     color: white;
@@ -113,14 +113,13 @@ body {
     border-radius: 5px;
     cursor: pointer;
     transition: background 0.3s ease;
-    width: 100%; /* Makes the button full width on smaller screens */
-    max-width: 300px; /* Limits the width on larger screens */
-    box-sizing: border-box; /* Ensures padding doesn’t overflow */
-    display: inline-block;
+    width: 200px; /* Fixed width */
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
 }
 
+/* Ensure Button is not resized */
 .play-button:focus {
-    outline: none; /* Remove the focus outline */
+    outline: none;
 }
 
 .play-button:hover {
