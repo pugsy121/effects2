@@ -4,7 +4,6 @@ body {
     padding: 0;
     overflow: hidden;
     font-family: Arial, sans-serif;
-    background: #f5f5f5; /* Light background to match the white video container */
 }
 
 /* Background Styling */
@@ -91,20 +90,19 @@ body {
 /* Video Container */
 .video-container {
     position: relative;
-    max-width: 90%;  /* Allows for mobile optimization */
-    margin: 0 auto;
-    padding: 10px;
-    background: rgba(255, 255, 255, 0.9);
+    max-width: 90%; /* Adjust to fit smaller devices */
+    margin: 10% auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.8);
     border-radius: 10px;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    max-height: 90vh;  /* Ensure it doesn't take up the full height */
     overflow: hidden;
 }
 
 /* Play Button */
 .play-button {
-    margin-top: 10px;
+    margin-top: 15px;
     padding: 10px 20px;
     font-size: 16px;
     background: #ff6f61;
@@ -113,15 +111,31 @@ body {
     border-radius: 5px;
     cursor: pointer;
     transition: background 0.3s ease;
-    width: 200px; /* Fixed width */
-    box-sizing: border-box; /* Ensure padding doesn't affect width */
+    width: 80%; /* Button width is relative to the container */
+    max-width: 300px; /* Ensure the button doesn't get too large */
+    box-sizing: border-box; /* Ensure padding doesn't affect the width */
+    display: inline-block;
 }
 
-/* Ensure Button is not resized */
-.play-button:focus {
-    outline: none;
-}
-
+/* Button Hover State */
 .play-button:hover {
     background: #ff4b4b;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .video-container {
+        max-width: 95%;
+    }
+    .play-button {
+        width: 80%;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .play-button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
 }
