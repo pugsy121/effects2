@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Birthday Video Player</title>
+    <title>HBD JIO</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -24,8 +24,9 @@
         <button class="play-button" onclick="playVideo()">Play</button>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti"></script>
     <script>
+        // Fireworks effect using canvas-confetti
         var count = 200;
         var defaults = {
             origin: { y: 0.7 }
@@ -42,8 +43,8 @@
         function playVideo() {
             const video = document.getElementById('video');
             video.play();
-
-            // Fireworks effect
+            
+            // Trigger fireworks effect after play button is pressed
             fire(0.25, {
                 spread: 26,
                 startVelocity: 55,
