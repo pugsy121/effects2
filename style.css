@@ -90,14 +90,15 @@ body {
 /* Video Container */
 .video-container {
     position: relative;
-    max-width: 90%; /* Adjust to fit smaller devices */
-    margin: 10% auto;
+    margin: 15% auto; /* Adjust to create more space around the video */
     padding: 20px;
     background: rgba(255, 255, 255, 0.8);
     border-radius: 10px;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     overflow: hidden;
+    width: 90%;
+    max-width: 500px;
 }
 
 /* Play Button */
