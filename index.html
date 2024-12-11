@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Birthday Video Player</title>
     <link rel="stylesheet" href="style.css">
-    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
 </head>
 <body>
     <div class="background">
@@ -18,51 +17,16 @@
     </div>
     <div class="video-container">
         <!-- Video with Dropbox source -->
-        <video id="video" width="100%" height="auto" controls>
+        <video id="video" controls>
             <source src="https://www.dropbox.com/scl/fi/4mocentm6lmkr14xqaq6f/video.mp4?rlkey=6hu4zsho4czhdhv85l9siwu76&st=5k7bfk9k&raw=1" type="video/mp4">
             Your browser does not support the video tag.
         </video>
         <button class="play-button" onclick="playVideo()">Play</button>
     </div>
-
     <script>
-        // Function to trigger the fireworks
-        function fire(particleRatio, opts) {
-            confetti({
-                origin: { y: 0.7 },
-                ...opts,
-                particleCount: Math.floor(200 * particleRatio)
-            });
-        }
-
-        // Play video and trigger fireworks
         function playVideo() {
             const video = document.getElementById('video');
             video.play();
-            
-            // Fireworks effect on play
-            fire(0.25, {
-                spread: 26,
-                startVelocity: 55,
-            });
-            fire(0.2, {
-                spread: 60,
-            });
-            fire(0.35, {
-                spread: 100,
-                decay: 0.91,
-                scalar: 0.8
-            });
-            fire(0.1, {
-                spread: 120,
-                startVelocity: 25,
-                decay: 0.92,
-                scalar: 1.2
-            });
-            fire(0.1, {
-                spread: 120,
-                startVelocity: 45,
-            });
         }
     </script>
 </body>
